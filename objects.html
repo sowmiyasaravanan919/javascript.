@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = {
+            rollnum: 21,
+            name: "Sowmiya",
+            license: true,
+            fees: 5444.56,
+            age: 21,
+            marks: {
+                html:98,
+                css:99,
+                bootstrap:99,
+                javascript:100,
+            }
+        };
+        console.log(student);
+        student.fees = 6666.66;
+        student.address = "12, Pari st, Erode.";
+        delete student.age;
+        console.log(student);
+
+        // array of object
+        let students = [
+            {
+            rollnum: 21,
+            name: "Sowmiya",
+            license: true,
+            fees: 5444.56,
+            age: 21,
+            marks: {
+                html:98,
+                css:99,
+                bootstrap:99,
+                javascript:100,
+            }
+        },
+        {
+            rollnum: 22,
+            name: "Makisha",
+            license: true,
+            fees: 4444.56,
+            age: 21,
+            marks: {
+                html:98,
+                css:99,
+                bootstrap:99,
+                javascript:100,
+            },
+            goldmedal:true,
+
+        }
+        ];
+        console.log(students);
+
+        let monthincome = [{
+            sunday:2500,
+            monday:2000,
+            tuesday:3500,
+            wednesday:2500,
+            thursday:5000,
+            friday:6000,
+            saturday:6500,
+        },
+        {
+            jan:400000,
+            feb:500000,
+            mar:600000,
+            aprl:800000,
+            may:500000,
+            jun:300000,
+            jul:400000,
+            agst:600000,
+            sep:900000,
+            oct:1000000,
+            nav:200000,
+            dec:120000
+        }
+    ]
+        console.log(monthincome);
+
+    </script>
+</body>
+
+</html>

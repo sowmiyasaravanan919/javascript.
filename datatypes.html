@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataTypes</title>
+</head>
+
+<body>
+
+    <button onclick="namess()">Prompt</button>
+    <button onclick="values()">open</button>
+
+    <script>
+        // datatypes
+
+        // string
+        let name = "Sowmiya";
+
+        console.log(typeof (name));
+        console.log(typeof ('Sowmiya'));
+        console.log(typeof 546);
+        console.log(typeof true);
+
+        // numeric
+        let amount = 100000;
+        console.log(amount);
+
+        let price = -123.87665;
+        console.log(price);
+
+        // boolean
+        let mark = false;
+        console.log(mark);
+
+        let pass = true;
+        console.log(pass);
+
+        // large & bigint 
+        let bignumber = 123456789012345678901234567890n;
+        console.log(bignumber);
+        console.log(typeof bignumber);
+
+        // NaN
+        console.log(10 * 2);
+        console.log(10 + 2);
+        console.log("10" + 2);
+        console.log("sowmi" + 910);
+        console.log("5" * 2);
+        console.log("Sowmi" * 2);
+
+        let result = null;
+        console.log(result);
+
+        // undefined
+        let exammark;
+        console.log(exammark);
+
+        // number conversion
+        console.log("5" * 2);
+        console.log(true * 2);
+        console.log(false * 2);
+        console.log(Number("200px"));
+        console.log(parseInt("200.50px"));
+        console.log(parseFloat("200.504px"));
+
+        let num = parseFloat("200.504px");
+        console.log(num);
+
+        // String conversion
+        console.log("Sowmiya" + 2);
+        console.log(String(3456.4564));
+        console.log(String(pass));
+        console.log(bignumber.toString());
+        console.log("3456.4564");
+
+
+
+        //string 
+        let a = "h"
+        console.log(a)
+        console.log(typeof a)
+        //number 
+        let b = 0.40
+        console.log(b)
+        console.log(typeof b)
+        //boolean 
+        let c = false
+        console.log(c)
+        console.log(typeof c)
+        //large or big integer ==> values
+        let d = 3000n
+        console.log(d)
+        console.log(typeof d)
+        // not a number
+        let e = a * c
+        console.log(e)
+        console.log(typeof e)
+        // null 
+        let f = null;
+        console.log(f)
+        console.log(typeof f)
+        //undefiened
+        let g;
+        console.log(g)
+        console.log(typeof g)
+
+
+
+        function namess() {
+            let name = prompt("Enter your name")
+            let age = prompt("Enter your age")
+            console.log(name)
+            console.log(typeof name)
+            console.log(age)
+            console.log(typeof age)
+            let convert = Number(age)
+            console.log(convert)
+            console.log(typeof convert)
+            let deconvert = String(convert)
+            console.log(deconvert)
+            console.log(typeof deconvert)
+        }
+
+        function values() {
+            let name = prompt("Enter the name")
+            let date = prompt("Enter the DOB")
+            console.log(name)
+            console.log(typeof name)
+            console.log(date)
+            console.log(typeof date)
+            let convert = Number(date)
+            console.log(convert)
+            console.log(typeof convert)
+            let deconvert = String(date)
+            console.log(deconvert)
+            console.log(typeof deconvert)
+        }
+
+
+
+        //HW
+        let value = 12345;
+        let words = "sowmiya";
+        let largnums = 123456789123456789n;
+        let rank;
+        let ranks = null;
+
+        console.log(value);
+
+        console.log(words);
+
+        console.log(typeof value);
+        console.log(typeof words);
+
+        console.log("5" * 2);
+        console.log(true * 2);
+        console.log(false * 2);
+        console.log(largnums);
+        console.log(typeof largnums);
+        console.log("words" * 2);
+        console.log(rank)
+        console.log(ranks)
+ 
+
+
+
+    </script>
+</body>
+
+</html>

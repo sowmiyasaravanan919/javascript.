@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Method</title>
+     
+</head>
+
+<body>
+    <button onclick="print()">Print</button>
+    <button onclick="closeCurrentTab()">Close</button>
+    <button onclick="opennewTab()">Open Instagram</button>
+    <button onclick="locationdetails()">Location Details</button>
+    <button onclick="history.back()"><< Back</button>
+    <button onclick="history.forward()">Forward >></button>
+    <button onclick="browserDetails()">Browser Details</button>
+    <button onclick="downloadfile()">Download File</button>
+
+    <a href="intro.html" download>Download intro.html file</a>
+
+     <script>
+        function closeCurrentTab(){
+            window.close();
+        };
+
+        function opennewTab(){
+            window.open("https://www.instagram.com");
+        };
+        function locationdetails(){
+            console.log("location.host: " + location.host);
+            console.log("location.hostname: " + location.hostname);
+            console.log("location.protocol: " + location.protocol);
+            console.log("location.href: " + location.href);
+            console.log("location.pathname: " + location.pathname);
+            document.write("location.pathname: " + location.pathname);
+            document.write("location.host: " + location.host);
+            document.write("location.hostname: " + location.hostname);
+            document.write("location.protocol: " + location.protocol);
+            document.write("location.href: " + location.href);
+        };
+        function browserDetails(){
+            console.log("navigator.appName: " + navigator.appName);
+            console.log("navigator.appVersion: " + navigator.appVersion);
+            console.log("navigator.platform: " + navigator.platform);
+            console.log("navigator.userAgent: " + navigator.userAgent);
+        }
+
+        document.cookie = "username=sowmi; password=1234;";
+        console.log(document.cookie);
+
+        function downloadfile(){
+            location.href = "intro.html";
+        }
+     </script>
+
+    </script>
+</body>
+
+</html>

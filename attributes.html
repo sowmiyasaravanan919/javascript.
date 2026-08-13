@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+ 
+<input type="file" id="photo" accept="image/*" onchange="changeImage()">
+
+<img id="myimg" src="" width="300">
+
+<script>
+function changeImage() {
+    let file = document.getElementById("photo").files[0];
+
+    if (file) {
+        let reader = new FileReader();
+
+        reader.onload = function(e) {
+            document.getElementById("myimg").setAttribute("src", e.target.result);
+        };
+
+        reader.readAsDataURL(file);
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+
+    <script>
+        let a = 25; // global variable
+        let b = 10;
+        // function declaration
+        function addition() {
+            console.log(a + b);
+        }
+        addition(); // call or invoke
+
+        // function expresion
+        let add = function () {
+            let x = 100; // local variable
+            console.log(50 + 5);
+            console.log("a=", a);
+            console.log("x =", x);
+
+        };
+        add();
+        //console.log("x =", x);
+        // parameters
+        function subtraction(num1, num2) {
+            console.log(num1 - num2);
+        }
+        subtraction(100, 50); //arguments
+        subtraction(100, 5);
+        subtraction(10, 5);
+
+
+        // return function
+        function multiply(num1, num2) {
+            return num1 * num2;
+        }
+        // let result = multiply(10, 5);
+        // console.log("Multiply = ",result);
+        console.log("Multiply = ", multiply(10, 5));
+
+        // callback function
+        function greet(name, callback) {
+            console.log("Good morning " + name);
+            callback;
+        }
+        greet("Makisha", addition());
+        greet("Sowmiya", batchtime());
+
+        function batchtime() {
+            console.log("Batch time: 10-12pm");
+        }
+
+        // arrow function 
+        let divide = (num1, num2) => {
+            return num1 / num2;
+        }
+        console.log("Divide = ", divide(100, 5));
+        // or
+        let divide1 = (num1, num2) => num1 / num2;
+        console.log("Divide = ", divide1(100, 5));
+
+        console.log("Last line - a=", a);
+
+    </script>
+</body>
+
+</html>

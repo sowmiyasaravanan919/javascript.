@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Attributes</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .ball {
+            border-radius: 50%;
+            border: 2px solid black;
+        }
+
+        .myheading {
+            text-align: center;
+            font-size: 36px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color: blue;">DOM - Attributes</h1>
+    <img id="myimg" style="width: 200px; height: 200px;" src="ImageFolder/ayrik.jpg" alt="img not found">
+    <br><br>
+    <button id="btnChangeImage" onclick="changeImage()">Change Image</button>
+    <button id="btnCreateElement" onclick="createNewPara()">Add a para</button>
+    <button id="btnChangeStyle" onclick="changeStyle()">Change Style</button>
+
+    <p id="path">img path</p>
+    <div>Just a container</div>
+</body>
+<script>
+    const myimg = document.getElementById("myimg");
+    const path = document.getElementById("path");
+    const div = document.querySelector("div")
+
+    
+    path.innerText = myimg.getAttribute("src");
+
+    function changeImage() {
+        myimg.setAttribute("src", "img/fruitcake.jpg");
+        path.innerText = myimg.getAttribute("src");
+    }
+
+    // changeStyle 
+    function changeStyle() {
+        div.classList.add("box");
+        div.classList.add("ball");
+        console.log(div.classList);
+        div.classList.remove("ball");
+        console.log(div.classList);
+        div.classList.toggle("ball");
+        console.log(div.classList.contains("ball"));
+        div.classList.replace("ball", "myheading");
+        console.log(div.classList.length);
+        console.log(div.classList.value);
+
+    }
+
+    // creatig elements
+    function createNewPara() {
+        const newPara = document.createElement("p");
+
+        newPara.innerHTML = "This is a new para created by <b>Javascript</b>.";
+        newPara.style.color = "blue";
+        // document.body.append(newPara);
+        // document.body.prepend(newPara);
+        document.body.insertBefore(newPara, myimg);
+    }
+
+
+</script>
+
+</html>

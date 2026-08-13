@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators </title>
+</head>
+
+<body>
+    <script>
+        // Arithmetic Operator ( + - * / ** %)
+        let a = 10;
+        let b = 2;
+        let c = a + b;
+        console.log("Addition: ", c);
+        console.log("Subtract: ", a - b);
+        console.log("Remainder: ", a % b);
+        console.log("Pow: ", b ** a);
+
+        // Assignment ( = += -= )
+        let i = 5;
+        // i = i + 3;
+        // i=i+3
+        // i += 3
+        i -= 3;
+        console.log("i: ", i);
+
+        // comparison operator ( < <= > >= == === !=)
+        console.log(a == "10");
+        console.log(a === "10");
+        console.log(a === 10);
+        console.log(a != b);
+
+        // Logical && || !
+        console.log(a > b && a > 30);
+        console.log(a > b || a > 30);
+        console.log(!(a > 30));
+
+        // Increment ++  
+        let j = 5;
+        j++; // j = j + 1;
+        // ++j;
+
+        // Decrement --
+        console.log("j: ", j);
+        j--; // j = j - 1;
+        // --j;
+        console.log("j: ", j);
+
+        // bitwise & | ^(XOR) ~(NOT) << (left shift) >> (right shift)
+        let x = 5;
+        let y = 1;
+        console.log(x & y);
+        console.log(x | y);
+        console.log(x ^ y);
+        console.log(x << y); // multiply by 2
+        console.log(x >> y); // divide by 2
+
+        // Ternary 
+        let age = 18;
+        // let result = age >= 18 ? "You are eligible" : "NOT eligible";
+        //console.log(result)
+        console.log(age >= 18 ? "You are eligible" : "NOT eligible");
+
+        // Nullish
+        let username = "";
+        console.log(username ?? "guest");
+
+        // Coalesing
+        console.log(username || "guest");
+
+        // Spread operator
+        let nums = [11,22,33,44];
+        // let extNums = [...nums, 55, 66, 77, 88];
+        // console.log(extNums);
+        console.log(...nums,55,66,77,88);
+
+    </script>
+</body>
+
+</html>

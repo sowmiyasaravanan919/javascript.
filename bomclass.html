@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+
+<body>
+    <h3>Browser Object Model (BOM)</h3>
+    <button onclick="window.print()">Print</button>
+    <button onclick="openGoogle()">Open Google</button>
+    <button onclick="closeCurrentTab()">Close</button>
+    <button onclick="locationdetails()">Location details</button>
+    <button onclick="history.back()"><- Back </button>
+            <button onclick="history.forward()">Next -></button>
+            <button onclick="browserdetails()">Show Browser Details</button>
+            <button onclick="downloadfile()">Download</button>
+
+            <a href="intro.html" download>Download intro.html file</a>
+
+            <script>
+                function openGoogle() {
+                    window.open("https://www.google.com");
+                    //location.href = "https://www.google.com";
+                }
+                function closeCurrentTab() {
+                    window.open('', '_self', '');
+                    window.close();
+                }
+                function locationdetails() {
+                    console.log(location.host);
+                    console.log(location.hostname);
+                    console.log(location.protocol);
+                    console.log(location.href);
+                    console.log(location.pathname);
+                }
+
+                function browserdetails() {
+                    console.log(navigator.appName);
+                    console.log(navigator.appVersion);
+                    console.log(navigator.login);
+                    console.log(navigator.platform);
+                }
+
+                // cookies
+                document.cookie = "username=sowmi; expires=Thu, 24 Jul 2026 11:00:00 UTC; path=/";
+                console.log(document.cookie);
+
+                // download
+                function downloadfile() {
+                    location.href = "intro.html";
+
+                }
+            </script>
+</body>
+
+</html>

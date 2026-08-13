@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Attributes</title>
+</head>
+<style>
+    body {  
+        text-align: center;
+        align-items: center;
+        border: 2px solid black;
+        width: 500px;
+    }
+</style>
+<body>
+    
+    <h1 style="color: blue;">DOM - Attributes</h1>
+    <img id="myimg" style="width: 200px; height: 200px;" src="img/image.jpg" alt="img not found">
+    <br><br>
+    <button id="btnChangeImage" onclick="changeImage()">Change Image</button>
+    <p id="path">img path</p>
+    
+</body>
+<script>
+    const myimg = document.getElementById("myimg");
+    const path = document.getElementById("path");
+   
+    path.innerText = myimg.getAttribute("src");
+
+    function changeImage() {  
+        myimg.setAttribute("src", "img/veg.jpg");
+    path.innerText = myimg.getAttribute("src");
+
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        console.time("timer");
+        console.log("Welcome");
+        console.error("Error occured");
+        console.warn("This is to warn about memory space");
+        console.info("This is to inform.");
+
+        console.table({ "name": "Makisha", "Course": "PFS" }); 
+        console.table({"name": "Sowmiya", "Course": "Python & fullstack"});       
+        console.timeEnd("timer");
+        
+         // console.clear();
+        console.group("countergroup");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.count("counter");
+        console.groupEnd("countergroup");
+
+        //H-W
+        console.time("Time");
+        console.group("Grouping");
+        console.count("line");
+        console.count("line");
+        console.count("line");
+        console.count("line");
+        console.count("line");
+        console.count("line");
+        console.groupEnd("Grouping")
+
+
+        console.assert(90<180,"This is true"); 
+        console.assert(90>180,"This is false"); 
+        console.timeEnd("Time");
+
+
+    </script>
+</body>
+
+</html>

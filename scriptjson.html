@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script type="module" src="scriptjson.js"></script>
+    <script>
+        let student = {
+            rollnum: 21,
+            name: "Sowmiya",
+            license: true,
+            fees: 5444.56,
+            age: 21,
+            marks: 90
+        };
+        console.log(student);
+
+        //this is convert the object to jsonstring for server understanding
+        let jsonstring = JSON.stringify(student);
+        console.log(jsonstring);
+        
+        //this is convert the jsonstring to object for server understanding
+        let jsobj = JSON.parse(jsonstring)
+        console.log(jsobj);
+        
+        </script>
+    
+</body>
+</html>

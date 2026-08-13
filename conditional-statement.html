@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Conditional Statement</h1>
+    <button onclick="checkIf()">Check If</button>
+    <button onclick="checkIfElse()">If-Else</button>
+    <button onclick="checkElseIf()">Else-If</button>
+    <button onclick="checkNestingIf()">Nesting-If</button>
+
+    <script>
+        let age = 21;
+        let hasLicense = true;
+
+        function checkIf() {
+            if (age >= 18) {
+                alert("You are eligible");
+            }
+        }
+
+        function checkIfElse() {
+            if (age >= 18) {
+                alert("You are eligible");
+            }
+            else {
+                alert("NOT eligible");
+            }
+        }
+
+        function checkElseIf() {
+            if (age < 18) {
+                alert("NOT eligible");
+            }
+            else if (hasLicense) {
+                alert("Happy driving!");
+            }
+            else {
+                alert("Apply your license first!");
+            }
+        }
+
+        function checkNestingIf() {
+            if (age >= 18) {
+                if (hasLicense)
+                    alert("You are eligible to drive");
+            }
+            else {
+                alert("NOT eligible");
+            }
+        }
+
+        // Switch-case statement
+        let day = 15;  
+        switch (day) {
+            case 0:
+            
+                alert("Sunday");
+                break;
+            case 1:
+                alert("Monday");
+                break;
+            case 2:
+                alert("Tuesday");
+                break;
+            case 3:
+                alert("Wednesday");
+                break;
+            case 4:
+                alert("Thursday");
+                break;
+            case 5:
+                alert("Friday");
+                break;
+            case 6:
+                alert("Saturday");
+                break;
+            // default:
+            //     alert("Invalid input");
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+[{
+    "rollnum": 21,
+    "name": "Sowmiya",
+    "license": true,
+    "fees": 5444.56,
+    "age": 21,
+    "marks": 90
+},
+{"rollnum": 21,
+            "student": "Sowmiya",
+            "license": true,
+            "fees": 5444.56,
+            "age": 21,
+            "marks": 90}]

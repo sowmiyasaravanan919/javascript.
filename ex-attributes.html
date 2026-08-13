@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{ 
+            border: 2px solid black;
+            width: 500px;
+            height: 500px;
+            background-color: green;
+        }
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 id="h1">DOM-Attributes</h1>
+        <img id="myimg" style="width: 300px; height: 300px;" src="img/image.jpg">
+        <br>
+        <button onclick="changeimg()">Click to change</button>
+        <p id="para">image</p>
+        <div id="content">Title</div>
+        <button onclick="create()">Add Ball</button>
+    </center>
+    <script>
+        let h1 = document.getElementById("h1")
+        let myimg = document.getElementById("myimg")
+        let para = document.getElementById("para")
+
+        para.innerText = myimg.getAttribute("src");
+
+        function changeimg() {
+
+            myimg.setAttribute("src", "img/cake2.jpg")
+
+            para.innerText = myimg.getAttribute("src");
+        }
+
+        let content = document.getElementById("content")
+
+        function create(){
+            title.classlit.add("ball")
+        }
+
+
+    </script>
+</body>
+
+</html>

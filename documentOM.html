@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="head">Document Object Model</h1>
+    <p class="pares" id="p1">This is a simple example of the Document Object Model.</p>
+    <p id="p2">This is another paragraph.</p>
+    <button onclick="clicktochange()">Click me</button>
+
+    <script>
+        const heading = document.getElementById('head');
+        const paragraph1 = document.getElementsByClassName('pares');
+        console.log(paragraph1);
+        const paragraph2 = document.getElementById('p2');
+        const paragraph = document.getElementsByTagName('p'); 
+        paragraph[0].style.color = 'blue';
+        console.log(paragraph); 
+
+        const para = document.querySelectorAll('p');
+        console.log(para); 
+
+        for(let i = 0; i < para.length; i++) {
+            para[i].style.color = 'pink';
+            para[i].style.backgroundColor = 'green';
+        }
+
+        heading.style.color = 'red'; 
+        paragraph2.style.fontSize = '18px';
+
+        // for (let i = 0; i < paragraph.length; i++) {
+        //     paragraph[i].style.color = 'green';
+        //     console.log(paragraph)
+        // }
+        function clicktochange() { 
+            heading.style.color = 'blue';  
+            paragraph2.style.fontSize = '30px'; 
+        }
+    </script>
+
+</body>
+</html>

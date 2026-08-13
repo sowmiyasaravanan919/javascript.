@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+</head>
+
+<body>
+    <div></div>
+    <div id="container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis soluta numquam voluptate error
+            laboriosam id excepturi dolores quas facere illo tempora ut, quo earum nulla vel atque autem dolorem
+            corrupti!</p>
+        Sowmya
+        <hr>
+        <div id="mydiv">
+            <h1>My Heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam facere nemo quod odio est necessitatibus,
+                id eius, et cum voluptatum doloremque voluptates fugiat, assumenda magnam dolorem aspernatur. Praesentium,
+                nisi inventore?</p>
+        <img id="myimg" width="200px" height="200px" src="img/cake2.jpg" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam facere nemo quod odio est necessitatibus,
+            id eius, et cum voluptatum doloremque voluptates fugiat, assumenda magnam dolorem aspernatur. Praesentium,
+            nisi inventore?</p></div>
+    </div>
+    <ol id="mylist">Maki
+
+        <li>One</li>
+        <li>One</li>
+        <hr>
+        <li>One</li>
+        <li>One</li>
+        <hr>
+        <li>One</li>
+        <li>One</li>
+        <li>One</li>
+    </ol>
+
+    <script>
+        const parent = document.getElementById("container");
+        const child = document.getElementById("myimg");
+
+        console.log(child.parentElement);
+        console.log(parent.childElementCount);
+        console.log(parent.children.length);
+        console.log(parent.childNodes.length);
+        console.log(parent.childNodes);
+        console.log(child.nextSibling);
+        console.log(child.nextElementSibling);
+        console.log(child.previousSibling);
+        console.log(child.previousElementSibling);
+        console.log(parent.firstChild);
+        console.log(parent.firstElementChild);
+        console.log(parent.lastChild);
+        console.log(parent.lastElementChild);
+        console.log(parent.children);
+        console.log(child.closest("#mydiv"));
+
+    </script>
+</body>
+
+</html>

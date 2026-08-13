@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="register()">Register</button>
+
+    <button onclick="gread()">Gread</button>
+
+    <button onclick="leep()">Leep Year</button>
+
+    <script>
+
+        function register() {
+
+            let mark = prompt("Enter your cutoff mark");
+            let cutoff = 180;
+
+            if (cutoff > mark) {
+                alert("You are not eligible to join");
+            }
+            else (cutoff < mark)
+            {
+                alert("You are eligible to join");  
+            }
+        }
+
+        function gread() {
+
+            let mark = 50;
+            let Mark = prompt("Enter your mark");
+
+            if (Mark >= 90) {
+                console.log("Grade: A+");
+                alert("Grade A+");
+            }
+
+            else if (Mark >= 80) {
+                console.log("Grade: A");
+                alert("Grade A");
+            }
+
+            else if (Mark >= 70) {
+                console.log("Grade: B");
+                alert("Grade B+");
+            }
+
+            else if (Mark >= 60) {
+                console.log("Grade: C");
+                alert("Grade B");
+            }
+
+            else if (Mark >= 50) {
+                console.log("Grade: D");
+                alert("Grade C");
+            }
+
+            else {
+                console.log("Fail");
+                alert("You are Fail");
+            }
+        }
+        function leep()
+        { 
+        let year = prompt("Enter the year");
+
+        if ( year % 400 === 0)
+        {
+             alert(year +"is a leep year");
+            console.log(year + "is a leep year");
+        }
+
+        else if (year % 100 === 0)
+        {
+            alert(year +"is not a leep year");
+            console.log(year  + "is not a leep year");
+        }
+
+        else if (year % 4 === 0)
+        {
+            alert(year +"is a leep year");
+            console.log(year  + "is a leep year");
+        }
+                 
+         else{
+              alert(year +"is not a leep year");
+            console.log(year  + "is not a leep year");
+         }
+        }
+
+    </script>
+
+</body>
+
+</html>

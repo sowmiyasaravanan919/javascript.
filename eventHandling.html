@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+
+<body>
+    <h1>Event Handling</h1>
+    <img id="imgCake" src="img/veg.jpg" width="200px" height="200px" alt=""><br>
+    <button id="btnColor">Change Color</button>
+    <button id="btnImage">Change Image</button>
+    <button id="btnText">Change Text</button>
+    <p id="paraResult">Demo</p>
+
+    <script>
+        // const btnColor = document.getElementById("btnColor");
+        // const imgCake = document.getElementById("imgCake");
+
+        btnColor.addEventListener("click", () => {
+            document.body.style.backgroundColor = "lightblue";
+            console.log("Mouse clicked");
+        });
+        btnColor.addEventListener("mousedown", () => {
+            console.log("Mouse down");
+        });
+        btnColor.addEventListener("mouseup", () => {
+            console.log("Mouse up");
+        });
+
+        document.getElementById("imgCake").addEventListener("dblclick", () => {
+            imgCake.setAttribute("src", "img/image.jpg");
+        });
+
+        document.getElementById("imgCake").addEventListener("mousemove", () => {
+            console.log("Mouse move");
+        });
+
+
+        document.getElementById("imgCake").addEventListener("mouseover", () => {
+            //document.body.style.backgroundColor = "pink";
+            console.log("Mouse OVER");
+        });
+
+
+        document.getElementById("imgCake").addEventListener("mouseout", () => {
+            // document.body.style.backgroundColor = "lightgreen";
+            document.getElementById("imgCake").style.opacity = 1;
+
+            console.log("Mouse Out");
+        });
+
+        document.getElementById("imgCake").addEventListener("mouseenter", () => {
+            // document.getElementById("imgCake").style.opacity = 0.5;
+            console.log("Mouse enter");
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for-loop
+        console.log("for-loop:");
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+        // do loop
+        console.log("do-loop:");
+        let j = 1;
+        do {
+            console.log(j);
+            j++;
+        } while (j <= 5);        
+
+        // while loop
+        console.log("while-loop:");
+        let k = 10;
+        while (k > 0) {
+            console.log(k);
+            k--;
+        };
+
+         let h = 20;
+        while (h > 0) {
+            console.log(h);
+            h--;
+        };
+
+        // break statement
+        console.log("break the loop:");
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5)
+                break;
+            console.log(i);
+        }
+
+        // continue statement (skip the iteration)
+        console.log("continue(skip the iteration) the loop:");
+        for (let i = 1; i <= 10; i++) {
+            if (i === 5)
+                continue;
+            console.log(i);
+        }
+        // loop over array
+        let fruits = ["Apple", "banana", "Orange", "Pomogranet", "Grapes", "xxxxxx"];
+        console.log(fruits);
+        console.log("loop over array:");
+        for (let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        let students = ["Sowmiya", "Mahisha", "Sharu", "Harshini", "Kalai", "Divya"];
+        console.log(students);
+        console.log("loop over array:");
+        for (let i = 0; i < students.length; i++) {
+            console.log("student-" + (i + 1) + ": " + students[i]);
+        }
+
+        // loop over object
+        let student = {             
+            name: "Sowmiya",
+            rollnum: 39,
+            age: 21,
+            license: true,
+            fees: 5000           
+        };
+        console.log(student);
+        console.log("loop over object:");
+        for (key in student) {
+            console.log(key + " = " + student[key]);
+        }
+
+        // for-of
+        console.log("for-of:");
+        for (value of fruits) {
+            console.log(value);
+
+        }
+
+        // for-in
+        console.log("for-in:");
+        for (key in student) {            
+            console.log(key + " = " + student[key]);
+        }
+
+        //For-each
+        console.log("for-each:");
+        let numbers = [10, 20, 30, 40, 50, 60];
+
+        numbers.forEach((numbers) => {
+            console.log(numbers*2);
+        });
+
+        //map 
+        console.log("map:");
+        let newNumbers = numbers.map(function(numbers) {
+            return numbers * 2;
+        });
+        console.log(newNumbers);
+
+        //Filter
+        console.log("filter:");
+        let filteredNumbers = numbers.filter(function(numbers) {
+            return numbers > 30;
+        });
+        console.log(filteredNumbers);
+
+        //Flatmap
+        console.log("flatmap:");    
+    let arr = [1, 2, 3, 4, 5];
+    let flatMappedArr = arr.flatMap((num) => [num, num * 2]);//[1, 2, 2, 4, 3, 6, 4, 8, 5, 10]
+    console.log(flatMappedArr); // Output: [1, 2, 2, 4, 3, 6, 4, 8, 5, 10]  
+
+
+    let marks =[10,20,30,40,50,60,70,80,90,100];
+    marks.forEach((numbers) =>{
+        console.log(numbers);
+    })
+
+    let newmarks = marks.map(function(marks){
+        return marks * 2;
+    });
+    console.log(newmarks);
+    </script>
+</body>
+
+</html>

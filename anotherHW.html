@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="repeat()">Repeat</button>
+    <div id="result"></div>
+<h1 id="name">Name</h1>
+    <button onclick="result(event)">Sowmi</button>
+    <button onclick="result(event)">Harshini</button>
+    <button onclick="result(event)">Sharu</button>
+
+    <h1 onclick="events(event)">One</h1>
+    <h1 onclick="events(event)">Two</h1>
+    <h1 onclick="events(event)">Three</h1>
+    <h1 onclick="events(event)">Four</h1>
+    <h1 onclick="events(event)">Five</h1>
+    
+    <script>
+        function events(event){
+            event.target.remove()
+        }
+
+
+    function result(event){
+        let name = document.getElementById("name")
+        name.textContent=event.target.textContent
+    }
+
+        let div = document.getElementById("result")
+        function repeat(){
+            let newelement = document.createElement("h1")
+            newelement.textContent = "Sowmi"
+            div.append(newelement)
+        }
+    </script>
+</body>
+</html>

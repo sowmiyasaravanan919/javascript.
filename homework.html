@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: green;
+            width: 2px;
+            height: 20px;
+            transition: 2s;
+        }
+        .maxwidth{
+            width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="totalvalue()">Total</button>
+    <input id="num3" placeholder="Result">
+
+    <h1 id="title">Hello World</h1>
+    <button onclick="clicktochange()">Change</button>
+     
+    <input id="guessnumber" type="number"> 
+    <button onclick="checknum()">Check</button>  
+    <p id="result">You are Right/Wrong</p> 
+    <p id="score">Score:10</p>
+
+    <div id="box"></div>
+    <br>
+    <button onclick="changecolor()">Change-colore</button>
+    <br>
+
+    <input id="input" onkeyup="display()"> 
+    <p id="parass"></p>
+
+    <button onclick="adding()">Add</button>
+    <h1 id="hone"></h1>
+
+    <script>
+        let hone = document.getElementById("hone")
+        function adding(){
+             hone.textContent="Hello" 
+        }
+
+
+        let input = document.getElementById("input")
+        let parass = document.getElementById("parass")
+         
+        function display(){
+            parass.textContent=input.value
+             
+        }  
+
+
+
+
+        let box = document.getElementById("box")
+        function changecolor(){ 
+            box.setAttribute("class","maxwidth")
+        }
+
+        //For loop
+        let guessnumber = document.getElementById("guessnumber")
+        let result = document.getElementById("result")
+        let scores = document.getElementById("score")
+         
+        let randomnum = Math.floor(Math.random()*10)+1
+        console.log(randomnum)        
+        function checknum(){
+            let scores =10
+            let enterednum = guessnumber.value
+
+            if(enterednum==randomnum){ 
+                result.textContent="You are right"
+                console.log("Righ") 
+                alert("You are won this game!")               
+            }
+            else{
+                scores=scores-1
+                score.textContent="scores:"+scores
+                console.log("Wrong")
+            }
+        }        
+
+        let box1 = document.getElementById("num1")
+        let box2 = document.getElementById("num2")
+        let box3 = document.getElementById("num3")
+        function totalvalue() {
+            let box1value = Number(box1.value)
+            let box2value = Number(box2.value)
+
+            console.log(box1value + box2value);
+            box3.value = box1value + box2value;
+        }
+        function clicktochange() {
+            let title = document.getElementById("title");
+            console.log(title.textContent);
+            title.textContent = "Bye World";
+        }
+
+        let fruitname = "apple";
+        let count = 10;
+        let price = 100;
+        let total = 100 * 10;
+        console.log(fruitname);
+        console.log(total);
+
+        let a = 9;
+        let b = 10;
+        function add() {
+            console.log(a + b)
+        }
+        add();
+
+        let factor = "Dhanush";
+        let fplayer = "patheerana";
+        let fmovie = "VIP";
+        function favourite() {
+            console.log("Favourite Actor :" + factor)
+            console.log("Favourite Player :" + fplayer)
+            console.log("Favourite Movie :" + fmovie)
+        }
+        favourite()
+
+        function area(length, breadth) {
+            console.log(length + breadth);
+        }
+        area(160, 140)
+
+        let rain = false;
+        if (rain) {
+            console.log("Take Umbrella");
+        }
+        else {
+            console.log("No need to take Umbrella");
+        }
+
+        let Homework = "NotCompleted";
+        if (Homework == "Completed") {
+            console.log("You can go out and play");
+        }
+        else {
+            console.log("You have to complete your homework");
+        }
+
+        let Season = "Summer";
+        if (Season == "Summer") {
+            console.log("Have fun in the sun.");
+        }
+        if (Season == "Winter") {
+            console.log("Wear warm clothes.");
+        }
+        if (Season == "Spring") {
+            console.log("Enjoy the season.");
+        }
+
+        let Score = 85;
+        if (Score < 50) {
+            console.log("You need to improve your score.");
+        }
+        else if (Score > 50 && Score <= 70) {
+            console.log("Good job!");
+        }
+        else if (Score > 70) {
+            console.log("Excellent performance!");
+        }
+
+        for (i = 1; i <= 16; i = i + 1) {
+            console.log(i + "x2 = " + i * 2);
+        }
+
+
+    </script>
+</body>
+
+</html>

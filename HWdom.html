@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        .h1 {
+            text-align: center;
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://www.instagram.com">Click here to visit Instagram</a>
+    <button onclick="changeH1()">...</button>
+    <button onclick="changeH1()">Change h1</button>
+    <h1 class="h1" id="head1">DOM</h1>
+    <h3>DOM-Elements</h3>
+    <ul>
+        <li>Anchors</li>
+        <li>Body</li>
+        <li>Documents Elements</li>
+        <li>Embed</li>
+        <li>Form</li>
+        <li>Head</li>
+        <li>Image</li>
+        <li>Link</li>
+        <li>Script</li>
+        <li>Title</li>
+    </ul>
+
+    <script>
+        function changeH1() {
+            const h1 = document.getElementById("head1");
+            h1.style.color = "black";  
+            h1.innerHTML = "<u>DOM-Document Object Model</u>";
+        }
+    </script>
+</body>
+
+</html>

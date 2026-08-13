@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Methods</title>
+</head>
+
+<body>
+    <h1>General Methods</h1>
+    <script>
+        // Get Date
+        const today = new Date();
+        console.log(today);
+        console.log(today.getDate());
+        console.log(today.getMonth() + 1);
+        console.log(today.getFullYear());
+        console.log(today.getDay());
+        console.log(today.getHours());
+
+        // Set Date
+        const dob = new Date("2026-09-09");
+        console.log(dob.setFullYear("2030"));
+        console.log(dob);
+
+        // Number Methods
+        // Number format
+        let num = 1234.567890;
+        console.log(num.toFixed(4));
+        console.log(num.toPrecision(6));
+
+        // Number convert
+        let num1 = "100.56px";
+        console.log(Number("56789"));
+        console.log(Number.parseInt(num1));
+        console.log(Number.parseFloat(num1));
+
+        // Number Check
+        console.log(Number.isNaN(num));
+        console.log(Number.isNaN(5 * "qwer"));
+
+    </script>
+</body>
+
+</html>
